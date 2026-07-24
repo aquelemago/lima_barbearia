@@ -663,6 +663,12 @@ button {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+}
+
+.gallery__item--tall {
+  aspect-ratio: 3 / 4;
 }
 
 .gallery__item img {
@@ -698,9 +704,13 @@ button {
   color: var(--color-text);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .gallery__item {
     min-height: 260px;
+  }
+
+  .gallery__item--tall {
+    min-height: 540px;
   }
 }
 

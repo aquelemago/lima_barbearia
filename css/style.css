@@ -675,6 +675,12 @@ button {
   min-height: 220px;
 }
 
+@media (min-width: 1024px) {
+  .gallery__item {
+    aspect-ratio: auto;
+  }
+}
+
 .gallery__item--tall {
   aspect-ratio: 3 / 4;
 }

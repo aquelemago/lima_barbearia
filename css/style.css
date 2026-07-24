@@ -1319,15 +1319,6 @@ button {
   margin-bottom: 0.5rem;
 }
 
-.footer__disclaimer {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  opacity: 0.5;
-  max-width: 480px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
 /* ---- WhatsApp Float ---- */
 .whatsapp-float {
   position: fixed;

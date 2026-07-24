@@ -1,5 +1,5 @@
 /* ============================================
-   LUXUS BARBER CLUB — Main Application
+   LIMA BARBEARIA — Main Application
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {

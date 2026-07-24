@@ -1,4 +1,4 @@
-# Luxus Barber Club — Landing Page Premium
+# Lima Barbearia — Landing Page Premium
 
 Landing page premium para barbearia, desenvolvida como demonstração de presença digital profissional.
 

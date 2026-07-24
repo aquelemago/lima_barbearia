@@ -676,7 +676,8 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .gallery__item {
+  .gallery__item,
+  .gallery__item--tall {
     aspect-ratio: auto;
   }
 }

@@ -378,12 +378,14 @@ button {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 45%,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.78) 100%
+    ),
+    linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8) 100%);
   z-index: 1;
 }
 
@@ -419,6 +421,95 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 100px;
+}
+
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 1.25rem;
+}
+
+.hero__eyebrow-line {
+  display: block;
+  width: clamp(2.5rem, 8vw, 4.5rem);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(212, 175, 55, 0.6) 50%,
+    rgba(212, 175, 55, 0) 100%
+  );
+}
+
+.hero__brand {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-style: normal;
+  color: #f4ecd8;
+  line-height: 1.6;
+  margin: 0 auto 1.25rem;
+  max-width: 620px;
+  letter-spacing: 0.01em;
+}
+
+.hero__brand em {
+  color: var(--color-gold-light);
+  font-style: italic;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero__brand .hero__break {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero__brand .hero__break {
+    display: block;
+  }
+}
+
+.hero__pillars {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 720px) {
+  .hero__pillars {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hero__pillar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.hero__pillar i {
+  color: var(--color-gold);
+  font-size: 0.875rem;
 }
 
 .hero__title {

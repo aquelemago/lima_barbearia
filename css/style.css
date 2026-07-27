@@ -16,6 +16,8 @@
   --color-gold-dark: #b8962e;
   --color-border: #2a2a2a;
   --color-border-light: #333333;
+  --color-footer-bg: #050505;
+  --color-whatsapp: #25d366;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -42,6 +44,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 html {
@@ -152,7 +172,11 @@ button {
   font-weight: 600;
   padding: 0.875rem 1.75rem;
   border-radius: 6px;
-  transition: all var(--transition-base);
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              border-color var(--transition-base),
+              transform var(--transition-base),
+              box-shadow var(--transition-base);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -206,7 +230,9 @@ button {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
-  transition: all var(--transition-base);
+  transition: background var(--transition-base),
+              border-bottom-color var(--transition-base),
+              backdrop-filter var(--transition-base);
 }
 
 .header.header--scrolled {
@@ -257,7 +283,8 @@ button {
   height: 2px;
   background: var(--color-text);
   border-radius: 2px;
-  transition: all var(--transition-base);
+  transition: background var(--transition-base),
+              transform var(--transition-base);
 }
 
 .header__nav-toggle[aria-expanded="true"] .header__nav-toggle-bar:nth-child(1) {
@@ -559,7 +586,7 @@ button {
   margin-bottom: 1.5rem;
   font-size: 1.375rem;
   color: var(--color-gold);
-  transition: all var(--transition-base);
+  transition: background var(--transition-base);
 }
 
 .service-card:hover .service-card__icon {
@@ -1217,7 +1244,7 @@ button {
 
 /* ---- Footer ---- */
 .footer {
-  background: #050505;
+  background: var(--color-footer-bg);
   border-top: 1px solid var(--color-border);
   padding: 4rem 0 1.5rem;
 }
@@ -1345,9 +1372,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #25d366;
+  background: var(--color-whatsapp);
   border-radius: 50%;
-  color: #fff;
+  color: var(--color-text);
   font-size: 1.625rem;
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
   transition: all var(--transition-base);

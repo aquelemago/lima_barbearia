@@ -34,6 +34,16 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <noscript>
+    <style>
+      [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    </style>
+  </noscript>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,7 +51,7 @@
     "name": "Lima Barbearia",
     "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80",
     "url": "https://limabarbearia.com.br/",
-    "telephone": "+5511999999999",
+    "telephone": "+5547000000000",
     "email": "contato@limabarbearia.com.br",
     "description": "Barbearia premium em Indaial, SC. Cortes, barba e grooming de alto padrão.",
     "address": {
@@ -54,7 +64,7 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -26.8980,
+      "latitude": -26.8973,
       "longitude": -49.2317
     },
     "openingHoursSpecification": [
@@ -69,7 +79,7 @@
     "sameAs": [
       "https://instagram.com/limabarbearia",
       "https://facebook.com/limabarbearia",
-      "https://wa.me/5511999999999"
+      "https://wa.me/5547000000000"
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -80,6 +90,19 @@
   </script>
 </head>
 <body>
+  <!--
+    ============================================================
+    PLACEHOLDER DE CONTATO — SUBSTITUIR ANTES DE PUBLICAR
+    Trocar (47) 00000-0000 e o número do WhatsApp 5547000000000
+    pelo número real da barbearia em TODOS os pontos:
+      - wa.me/5547000000000 (links)
+      - tel:+5547000000000
+      - schema "telephone" (JSON-LD)
+      - schema "sameAs" (wa.me)
+      - cards e rodapé de contato
+    Buscar por "5547000000000" e "(47) 00000-0000".
+    ============================================================
+  -->
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="header" id="header" role="banner">
@@ -94,13 +117,12 @@
           <span class="header__nav-toggle-bar"></span>
           <span class="header__nav-toggle-bar"></span>
         </button>
-        <ul class="header__nav-menu" id="navMenu" role="menubar">
-          <li role="none"><a href="#servicos" role="menuitem" class="header__nav-link">Serviços</a></li>
-          <li role="none"><a href="#galeria" role="menuitem" class="header__nav-link">Galeria</a></li>
-          <li role="none"><a href="#equipe" role="menuitem" class="header__nav-link">Equipe</a></li>
-          <li role="none"><a href="#depoimentos" role="menuitem" class="header__nav-link">Depoimentos</a></li>
-          <li role="none"><a href="#contato" role="menuitem" class="header__nav-link">Contato</a></li>
-          <li role="none"><a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" role="menuitem" class="header__nav-cta">Quero agendar</a></li>
+        <ul class="header__nav-menu" id="navMenu">
+          <li><a href="#servicos" class="header__nav-link">Serviços</a></li>
+          <li><a href="#galeria" class="header__nav-link">Galeria</a></li>
+          <li><a href="#depoimentos" class="header__nav-link">Depoimentos</a></li>
+          <li><a href="#horarios" class="header__nav-link">Horários</a></li>
+          <li><a href="https://wa.me/5547000000000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="header__nav-cta">Quero meu horário</a></li>
         </ul>
       </nav>
     </div>
@@ -120,15 +142,15 @@
       <div class="hero__content">
         <span class="hero__eyebrow" data-reveal>
           <span class="hero__eyebrow-line"></span>
-          Barbearia Lima
+          Barbearia Premium · Indaial, SC
           <span class="hero__eyebrow-line"></span>
         </span>
         <h1 class="hero__title" data-reveal>
-          Estilo que transforma<span class="hero__title-highlight">.</span><br>
-          Cuidado que permanece<span class="hero__title-highlight">.</span>
+          Saia da cadeira<span class="hero__title-highlight">.</span><br>
+          Deixe o espelho trabalhar<span class="hero__title-highlight">.</span>
         </h1>
         <div class="hero__actions" data-reveal>
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Sou%20cliente%20da%20Barbearia%20Lima." target="_blank" rel="noopener noreferrer" class="btn btn--primary" aria-label="Agendar horário pelo WhatsApp">
+          <a href="https://wa.me/5547000000000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.%20Sou%20cliente%20da%20Barbearia%20Lima." target="_blank" rel="noopener noreferrer" class="btn btn--primary" aria-label="Agendar horário pelo WhatsApp">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
             Quero meu horário
           </a>
@@ -137,15 +159,16 @@
             <i class="fas fa-arrow-down" aria-hidden="true"></i>
           </a>
         </div>
+        <p class="hero__cta-note" data-reveal>Respondemos em minutos no WhatsApp. É só confirmar seu nome e o serviço.</p>
         <div class="hero__metrics" data-reveal>
-          <span class="hero__metrics-item">★ 5,0 · 528 clientes</span>
+          <span class="hero__metrics-item">★ Nota 5,0</span>
           <span class="hero__metrics-item">Desde 2016</span>
           <span class="hero__metrics-item">Indaial, SC</span>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll">
         <span>Descubra mais</span>
-        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
       </div>
     </section>
 
@@ -170,7 +193,7 @@
               <i class="fas fa-hand-sparkles"></i>
             </div>
             <h3 class="service-card__title">Barba Completa</h3>
-            <p class="service-card__desc">O momento mais relaxante da sua semana. Navalha, toalha quente, balm premium — e você sai 5 anos mais novo.</p>
+            <p class="service-card__desc">O momento mais relaxante da sua semana. Navalha, toalha quente, balm premium. Você sai 5 anos mais novo.</p>
             <span class="service-card__price">R$ 69</span>
           </article>
           <article class="service-card" data-reveal>
@@ -178,22 +201,27 @@
               <i class="fas fa-crown"></i>
             </div>
             <h3 class="service-card__title">Combo Lima</h3>
-            <p class="service-card__desc">O que faz o homem voltar. Corte, barba, hidratação e massagem capilar — 1h30 de puro cuidado.</p>
+            <p class="service-card__desc">O que faz o homem voltar. Corte, barba, hidratação e massagem capilar em 1h30 de puro cuidado.</p>
             <span class="service-card__price">R$ 149</span>
           </article>
           
         </div>
         <div class="services__cta" data-reveal>
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+          <a href="https://wa.me/5547000000000?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            Garanta Seu Horário
+            Quero meu horário
           </a>
+          <p class="services__cta-note">Sem cadastro, sem app. O horário se confirma em uma conversa.</p>
         </div>
       </div>
     </section>
 
-    <section class="section numbers" id="numeros" aria-label="Números da empresa">
+    <section class="section numbers" id="numeros" aria-labelledby="numbers-title">
       <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__tag">Números</span>
+          <h2 class="section__title" id="numbers-title">Nossa História em Números</h2>
+        </div>
         <div class="numbers__grid">
           <div class="number-item" data-reveal>
             <span class="number-item__value" data-count="8500">0</span>
@@ -232,37 +260,37 @@
         </div>
 <div class="gallery__grid">
           <figure class="gallery__item gallery__item--wide" data-reveal>
-            <img src="https://picsum.photos/id/14/600/400" alt="Corte degradê baixo masculino" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format" alt="Barbeiro executando um corte clássico com tesoura em cliente" loading="lazy" data-full="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>Degradê que vira elogio</span>
             </figcaption>
           </figure>
           <figure class="gallery__item gallery__item--tall" data-reveal>
-            <img src="https://picsum.photos/id/22/400/600" alt="Barba masculina alinhada" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80&auto=format" alt="Barbeiro alinhando a barba de um cliente com navalha" loading="lazy" data-full="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>Barba que para a conversa</span>
             </figcaption>
           </figure>
           <figure class="gallery__item" data-reveal>
-            <img src="https://picsum.photos/id/33/400/400" alt="Corte social masculino" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&q=80&auto=format" alt="Navalha clássica e aparador sobre a bancada da barbearia" loading="lazy" data-full="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>Corte que abre portas</span>
             </figcaption>
           </figure>
           <figure class="gallery__item" data-reveal>
-            <img src="https://picsum.photos/id/64/400/400" alt="Corte masculino moderno" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=400&q=80&auto=format" alt="Barbeiro finalizando o corte de um cliente" loading="lazy" data-full="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=900&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>Autoestima na medida</span>
             </figcaption>
           </figure>
           <figure class="gallery__item" data-reveal>
-            <img src="https://picsum.photos/id/65/400/400" alt="Homem com corte estilizado" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=400&q=80&auto=format" alt="Barbeiro estilizando o cabelo do cliente com máquina" loading="lazy" data-full="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=900&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>30 minutos de paz</span>
             </figcaption>
           </figure>
           <figure class="gallery__item gallery__item--wide" data-reveal>
-            <img src="https://picsum.photos/id/96/600/400" alt="Ambiente aconchegante" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80&auto=format" alt="Interior de barbearia com cadeiras e espelhos" loading="lazy" data-full="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=85&auto=format">
             <figcaption class="gallery__caption">
               <span>Seu novo lugar favorito</span>
             </figcaption>
@@ -281,7 +309,7 @@
         <div class="team__grid">
           <article class="team-card" data-reveal>
             <div class="team-card__image">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=90&auto=format" alt="Foto de Ricardo Mendes" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800&q=90&auto=format" alt="Ricardo Mendes executando um corte com tesoura" loading="lazy">
             </div>
             <div class="team-card__info">
               <h3 class="team-card__name">Ricardo Mendes</h3>
@@ -291,7 +319,7 @@
           </article>
           <article class="team-card" data-reveal>
             <div class="team-card__image">
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=90&auto=format" alt="Foto de Felipe Oliveira" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&q=90&auto=format" alt="Felipe Oliveira alinhando a barba de um cliente" loading="lazy">
             </div>
             <div class="team-card__info">
               <h3 class="team-card__name">Felipe Oliveira</h3>
@@ -301,7 +329,7 @@
           </article>
           <article class="team-card" data-reveal>
             <div class="team-card__image">
-              <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=90&auto=format" alt="Foto de Thiago Costa" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=90&auto=format" alt="Thiago Costa, barbeiro com barba, em retrato" loading="lazy">
             </div>
             <div class="team-card__info">
               <h3 class="team-card__name">Thiago Costa</h3>
@@ -329,8 +357,7 @@
               <i class="fas fa-star" aria-hidden="true"></i>
               <i class="fas fa-star" aria-hidden="true"></i>
             </div>
-            <span class="testimonial-card__badge"><i class="fas fa-check-circle" aria-hidden="true"></i> Depoimento Verificado</span>
-            <p class="testimonial-card__text">"Já passei por várias barbearias, mas nenhuma me fez sentir assim. O Ricardo não corta cabelo — ele esculpe. Saí de lá parecendo outro homem."</p>
+            <p class="testimonial-card__text">"Já passei por várias barbearias, mas nenhuma me fez sentir assim. O Ricardo não corta cabelo, ele esculpe. Saí de lá parecendo outro homem."</p>
             <footer class="testimonial-card__author">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80&auto=format" alt="Foto de Lucas Albuquerque" loading="lazy">
               <div>
@@ -399,7 +426,7 @@
             </div>
           </div>
           <div class="about__image" data-reveal>
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=85&auto=format" alt="Interior da Lima Barbearia" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=85&auto=format" alt="Interior da Lima Barbearia" loading="lazy">
           </div>
         </div>
       </div>
@@ -418,7 +445,7 @@
               <i class="fas fa-chevron-down faq__icon" aria-hidden="true"></i>
             </summary>
             <div class="faq__answer">
-              <p>Os dois funcionam. Recomendamos agendar pra não esperar, mas se bater aquela vontade de última hora, aparece — a gente dá um jeito.</p>
+              <p>Os dois funcionam. Recomendamos agendar pra não esperar, mas se bater aquela vontade de última hora, aparece que a gente dá um jeito.</p>
             </div>
           </details>
           <details class="faq__item">
@@ -454,7 +481,7 @@
               <i class="fas fa-chevron-down faq__icon" aria-hidden="true"></i>
             </summary>
             <div class="faq__answer">
-              <p>A partir de 3 anos. Os pequenos adoram — e os pais também. Ambiente acolhedor e profissionais que sabem lidar com criança.</p>
+              <p>A partir de 3 anos. Os pequenos adoram, e os pais também. Ambiente acolhedor e profissionais que sabem lidar com criança.</p>
             </div>
           </details>
         </div>
@@ -528,20 +555,20 @@
           <p class="section__desc">Pronto pra mudar seu visual? Escolha o canal e vem.</p>
         </div>
         <div class="contact__grid" data-reveal>
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="contact__card" aria-label="Fale conosco pelo WhatsApp">
+          <a href="https://wa.me/5547000000000" target="_blank" rel="noopener noreferrer" class="contact__card" aria-label="Fale conosco pelo WhatsApp">
             <div class="contact__card-icon" aria-hidden="true">
               <i class="fab fa-whatsapp"></i>
             </div>
             <h3 class="contact__card-title">WhatsApp</h3>
-            <p class="contact__card-info">(11) 99999-9999</p>
+            <p class="contact__card-info">(47) 00000-0000</p>
             <span class="contact__card-action">Chamar no WhatsApp <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </a>
-          <a href="tel:+5511999999999" class="contact__card" aria-label="Ligue para nós">
+          <a href="tel:+5547000000000" class="contact__card" aria-label="Ligue para nós">
             <div class="contact__card-icon" aria-hidden="true">
               <i class="fas fa-phone-alt"></i>
             </div>
             <h3 class="contact__card-title">Telefone</h3>
-            <p class="contact__card-info">(11) 99999-9999</p>
+            <p class="contact__card-info">(47) 00000-0000</p>
             <span class="contact__card-action">Ligue Agora <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </a>
           <a href="https://instagram.com/limabarbearia" target="_blank" rel="noopener noreferrer" class="contact__card" aria-label="Siga-nos no Instagram">
@@ -575,7 +602,7 @@
           </a>
           <p class="footer__desc">O cuidado que o homem moderno merece. Tradição e estilo em Indaial desde 2016.</p>
           <div class="footer__social">
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/5547000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <i class="fab fa-whatsapp" aria-hidden="true"></i>
             </a>
             <a href="https://instagram.com/limabarbearia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -596,23 +623,26 @@
             <li><a href="#galeria">Galeria</a></li>
             <li><a href="#equipe">Equipe</a></li>
             <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#horarios">Horários</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
         <div class="footer__links">
           <h3 class="footer__links-title">Horários</h3>
           <ul>
-            <li>Seg—Qua: 09h—19h</li>
-            <li>Qui—Sex: 09h—20h</li>
-            <li>Sáb: 08h—18h</li>
+            <li>Seg–Qua: 09h–19h</li>
+            <li>Qui–Sex: 09h–20h</li>
+            <li>Sáb: 08h–18h</li>
             <li>Dom: Fechado</li>
           </ul>
         </div>
         <div class="footer__links">
           <h3 class="footer__links-title">Contato</h3>
           <ul>
-            <li><a href="https://wa.me/5511999999999">WhatsApp</a></li>
-            <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+            <li><a href="https://wa.me/5547000000000">WhatsApp</a></li>
+            <li><a href="tel:+5547000000000">(47) 00000-0000</a></li>
             <li>Rua São Paulo, 150 — Centro</li>
             <li>Indaial, SC</li>
           </ul>
@@ -624,9 +654,17 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+  <a href="https://wa.me/5547000000000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada da galeria">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar imagem ampliada">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <img class="lightbox__img" id="lightboxImg" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </dialog>
 
   <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
     <i class="fas fa-chevron-up" aria-hidden="true"></i>

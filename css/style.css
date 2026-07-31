@@ -10,7 +10,7 @@
   --color-bg-elevated: #222222;
   --color-text: #f5f5f5;
   --color-text-secondary: #999999;
-  --color-text-muted: #666666;
+  --color-text-muted: #8a8a8a;
   --color-gold: #d4af37;
   --color-gold-light: #e8c54a;
   --color-gold-dark: #b8962e;
@@ -497,7 +497,14 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero__cta-note {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .hero__metrics {
@@ -619,10 +626,20 @@ button {
   margin-top: 3rem;
 }
 
+.services__cta-note {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 1rem;
+}
+
 /* ---- Numbers ---- */
 .numbers {
   background: var(--color-bg);
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 5rem;
+}
+
+.numbers .section__header {
+  margin-bottom: 2.5rem;
 }
 
 .numbers__grid {
@@ -754,6 +771,79 @@ button {
   }
 }
 
+/* ---- Gallery Lightbox ---- */
+.lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: min(94vw, 1100px);
+  max-height: 92vh;
+  overflow: hidden;
+}
+
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+  display: block;
+}
+
+.lightbox__caption {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid var(--color-border-light);
+  border-radius: 50%;
+  color: var(--color-text);
+  font-size: 1.0625rem;
+  cursor: pointer;
+  transition: border-color var(--transition-base),
+              color var(--transition-base),
+              transform var(--transition-base);
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: scale(1.06);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .lightbox[open] {
+    padding: 0.875rem;
+  }
+}
+
 /* ---- Team ---- */
 .team {
   background: var(--color-bg-alt);
@@ -880,21 +970,6 @@ button {
   color: var(--color-gold);
   font-size: 0.9375rem;
   margin-bottom: 1.25rem;
-}
-
-.testimonial-card__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  font-size: 0.75rem;
-  color: var(--color-gold);
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.testimonial-card__badge i {
-  font-size: 0.6875rem;
 }
 
 .testimonial-card__text {
@@ -1193,7 +1268,8 @@ button {
   border-color: var(--color-gold);
   transform: translateY(-6px);
   box-shadow: var(--shadow-gold);
-  outline: none;
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
 }
 
 .contact__card-icon {
@@ -1319,7 +1395,8 @@ button {
 .footer__social a:focus-visible {
   background: rgba(212, 175, 55, 0.12);
   color: var(--color-gold);
-  outline: none;
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }
 
 .footer__links-title {
@@ -1379,8 +1456,9 @@ button {
   justify-content: center;
   background: var(--color-whatsapp);
   border-radius: 50%;
-  color: var(--color-text);
+  color: var(--color-bg);
   font-size: 1.625rem;
+  border: 2px solid rgba(10, 10, 10, 0.15);
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
   transition: transform var(--transition-base),
               box-shadow var(--transition-base);
@@ -1390,7 +1468,8 @@ button {
 .whatsapp-float:focus-visible {
   transform: scale(1.08);
   box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
-  outline: none;
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
 }
 
 /* ---- Back to Top ---- */
